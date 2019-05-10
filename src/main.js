@@ -16,7 +16,6 @@ Vue.prototype.$confirm = Modal.confirm;
 
 Vue.use(Antd);
 
-
 new Vue({
   render: h => h(App),
   router,
