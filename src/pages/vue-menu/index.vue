@@ -173,15 +173,6 @@
  *  的其他内容也填写了，也不妨碍。
  */
 
-import Vue from "vue";
-import { Radio, Button, Input, Icon, Modal, message } from "ant-design-vue";
-Vue.use(Radio)
-  .use(Button)
-  .use(Icon)
-  .use(Input)
-  .use(message)
-  .use(Modal);
-
 export default {
   name: "PublicAccountManagement",
   props: {},
@@ -367,7 +358,7 @@ export default {
     //删除当前菜单
     deleteMenu() {
       var _this = this;
-      Modal.confirm({
+      this.$confirm({
         title: "提示",
         content: "此操作将永久删除该菜单, 是否继续?",
         onOk() {
@@ -392,7 +383,7 @@ export default {
           1
         );
       }
-      message.success("删除成功!");
+      this.$message.success("删除成功!");
     }
   },
   computed: {
